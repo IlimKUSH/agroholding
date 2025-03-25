@@ -1,3 +1,5 @@
+@use './global' as sponsors;
+
 .sponsors {
   &__top {
     margin-bottom: 20px;
@@ -14,17 +16,17 @@
     padding: 120px 0 90px;
 
     .box {
-      @include displayCenter(center, space-between);
-      background-color: $brand_one;
+      @include sponsors.displayCenter(center, space-between);
+      background-color: sponsors.$brand_one;
       border-radius: 5px;
       padding: 55px 67px 49px;
       h1 {
-        font-family: $Amatic;
+        font-family: sponsors.$Amatic;
         font-size: 30px;
         margin: auto;
         font-weight: 700;
         padding: 0 18px;
-        color: $white;
+        color: sponsors.$white;
       }
       img {
         object-fit: contain;

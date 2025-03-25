@@ -1,3 +1,5 @@
+@use './global' as arrow_up;
+
 .arrow_up {
   position: fixed;
   bottom: 0;
@@ -7,20 +9,20 @@
   height: 40px;
   z-index: 2;
   border-radius: 50%;
-  @include displayCenter(center, center);
-  background-color: $brand_one;
+  @include arrow_up.displayCenter(center, center);
+  background-color: arrow_up.$brand_one;
   cursor: pointer;
-  box-shadow: $box_shadow_two;
+  box-shadow: arrow_up.$box_shadow_two;
   transition: all 0.3s ease-in-out;
   .icon {
     transition: all 0.3s ease-in-out;
-    color: $white;
+    color: arrow_up.$white;
     font-size: 28px;
   }
   &:hover {
-    background-color: $brand_two;
+    background-color: arrow_up.$brand_two;
     .icon {
-      color: $brand_one;
+      color: arrow_up.$brand_one;
     }
   }
 }

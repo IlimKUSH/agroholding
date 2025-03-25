@@ -1,3 +1,5 @@
+@use './global' as notfound;
+
 .notfound {
   background: url('https://images.pexels.com/photos/220201/pexels-photo-220201.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
     no-repeat center center/cover;
@@ -6,28 +8,28 @@
   background-attachment: fixed !important;
   position: relative !important;
   &:before {
-    @include transparentLayer;
+    @include notfound.transparentLayer;
   }
-  @include displayCenter(center, center);
+  @include notfound.displayCenter(center, center);
 
   .notfound_content {
     position: relative;
     text-align: center;
     h1 {
-      font-family: $Amatic;
+      font-family: notfound.$Amatic;
       font-weight: 700;
-      color: $white;
+      color: notfound.$white;
       font-size: 70px;
     }
     h5 {
-      font-family: $Barlow;
+      font-family: notfound.$Barlow;
       font-weight: 500;
-      color: $white;
+      color: notfound.$white;
       //   font-size: 70px;
     }
     .back {
-      background-color: $brand_two;
-      font-family: $Barlow !important;
+      background-color: notfound.$brand_two;
+      font-family: notfound.$Barlow !important;
       font-weight: 500;
       font-size: 20px;
       margin-top: 20px;

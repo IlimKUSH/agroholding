@@ -1,3 +1,5 @@
+@use './global' as contact;
+
 .contact {
   background: url('https://images.pexels.com/photos/3458362/pexels-photo-3458362.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
     no-repeat center center/cover;
@@ -6,15 +8,15 @@
   background-attachment: fixed !important;
   position: relative !important;
   &:before {
-    @include transparentLayer;
+    @include contact.transparentLayer;
   }
-  @include displayCenter(center, center);
+  @include contact.displayCenter(center, center);
   .content {
     position: relative;
     h1 {
-      font-family: $Amatic;
+      font-family: contact.$Amatic;
       font-weight: 700;
-      color: $white;
+      color: contact.$white;
       font-size: 70px;
     }
   }

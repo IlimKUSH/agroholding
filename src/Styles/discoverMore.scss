@@ -1,3 +1,5 @@
+@use './global' as discover;
+
 .discover {
   background: url('https://images.pexels.com/photos/2933243/pexels-photo-2933243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
     no-repeat center center/cover;
@@ -8,7 +10,7 @@
   padding: 120px 0 90px;
   position: relative;
   &:before {
-    @include transparentLayer;
+    @include discover.transparentLayer;
     background-color: rgba(91, 140, 81, 0.9) !important;
   }
   .content {
@@ -17,8 +19,8 @@
     text-align: center;
     max-width: 1000px;
     h1 {
-      color: $white;
-      font-family: $Amatic;
+      color: discover.$white;
+      font-family: discover.$Amatic;
       font-size: 70px;
       line-height: 78px;
       font-weight: 700;
@@ -26,23 +28,23 @@
     }
     p {
       font-size: 20px;
-      font-family: $Barlow;
+      font-family: discover.$Barlow;
       font-weight: 500;
-      color: $white;
+      color: discover.$white;
     }
     .btn {
         padding: 23px 50px;
-      font-family: $Barlow;
+      font-family: discover.$Barlow;
       margin-top: 55px;
       font-weight: 600;
-      color: $black;
+      color: discover.$black;
       font-size: 20px;
       border: none;
       outline: none;
       border-radius: 5px;
-      background-color: $brand_two;
+      background-color: discover.$brand_two;
       &:hover {
-        box-shadow: $box_shadow_two;
+        box-shadow: discover.$box_shadow_two;
       }
     }
   }

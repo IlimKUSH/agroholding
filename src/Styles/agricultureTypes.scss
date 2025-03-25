@@ -1,3 +1,5 @@
+@use './global' as agriculture__types;
+
 .agriculture__types {
   background: url('https://images.pexels.com/photos/6052983/pexels-photo-6052983.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
     no-repeat center center/cover;
@@ -8,10 +10,10 @@
   padding: 120px 0 90px;
   position: relative;
   &:before {
-    @include transparentLayer;
+    @include agriculture__types.transparentLayer;
   }
   .agriculture__container {
-    @include displayCenter(center, center);
+    @include agriculture__types.displayCenter(center, center);
     flex-direction: column;
     position: relative;
 
@@ -26,8 +28,8 @@
         cursor: pointer;
         width: 100px;
         height: 100px;
-        background-color: $brand_two;
-        @include displayCenter(center, center);
+        background-color: agriculture__types.$brand_two;
+        @include agriculture__types.displayCenter(center, center);
         border-radius: 5px;
         svg {
           font-size: 30px;
@@ -35,9 +37,9 @@
         }
 
         &:hover {
-          background-color: $brand_one;
+          background-color: agriculture__types.$brand_one;
           svg {
-            color: $brand_two;
+            color: agriculture__types.$brand_two;
           }
         }
       }
@@ -49,18 +51,18 @@
         font-weight: 600;
         letter-spacing: 0.2em;
         text-transform: uppercase;
-        font-family: $Barlow;
+        font-family: agriculture__types.$Barlow;
         text-align: center;
-        color: $brand_two;
+        color: agriculture__types.$brand_two;
       }
       h1 {
         text-align: center;
         font-size: 91px;
-        font-family: $Amatic;
+        font-family: agriculture__types.$Amatic;
         margin-top: 14px;
         font-weight: 700;
         line-height: 1;
-        color: $white;
+        color: agriculture__types.$white;
       }
     }
   }

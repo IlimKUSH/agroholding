@@ -1,6 +1,8 @@
+@use './global' as growing;
+
 .growing {
   padding: 120px 0 0 0px;
-  background-color: $brand_three;
+  background-color: growing.$brand_three;
   .image_container {
     position: relative;
     img {
@@ -10,7 +12,7 @@
       object-fit: contain;
     }
     .fit {
-      background-color: $brand_two;
+      background-color: growing.$brand_two;
       border-radius: 5px;
       position: absolute;
       bottom: 0;
@@ -19,19 +21,19 @@
       bottom: -60px;
       height: 172px;
       width: 270px;
-      @include displayCenter(center, center);
+      @include growing.displayCenter(center, center);
       flex-direction: column;
       h2 {
         font-weight: 600;
-        font-family: $Amatic;
+        font-family: growing.$Amatic;
         font-size: 60px;
         text-transform: uppercase;
-        color: $black;
+        color: growing.$black;
       }
       p {
-        font-family: $Barlow;
+        font-family: growing.$Barlow;
         letter-spacing: 0.2em;
-        color: $black;
+        color: growing.$black;
         font-size: 16px;
         text-transform: uppercase;
         font-weight: 600;
@@ -46,47 +48,47 @@
     margin-top: 150px;
     margin-left: -149px;
     border-radius: 5px 5px 0 0;
-    box-shadow: $box_shadow_one;
+    box-shadow: growing.$box_shadow_one;
     height: 100%;
     p {
       text-transform: uppercase;
-      color: $brand_one;
-      font-family: $Barlow;
+      color: growing.$brand_one;
+      font-family: growing.$Barlow;
       font-size: 14px;
       font-weight: 600;
       letter-spacing: 0.2em;
       line-height: 24px;
     }
     .para {
-      color: $gray;
+      color: growing.$gray;
       margin: 30px 0 20px 0;
       text-transform: capitalize !important;
     }
     h3 {
       margin: 0;
-      color: $black;
+      color: growing.$black;
       font-size: 70px;
       font-weight: 700;
-      font-family: $Amatic;
+      font-family: growing.$Amatic;
       line-height: 1em;
     }
     .progress__bars {
       margin-bottom: 10px !important;
       div {
-        @include displayCenter(center, space-between);
+        @include growing.displayCenter(center, space-between);
         margin-bottom: 10px;
         h5 {
-          font-family: $Barlow;
+          font-family: growing.$Barlow;
           font-weight: 500;
           font-size: 18px;
           &:nth-child(2) {
-            color: $gray;
+            color: growing.$gray;
           }
         }
       }
       .progress {
         border-radius: 33px !important;
-        background-color: $brand_one !important;
+        background-color: growing.$brand_one !important;
       }
     }
   }

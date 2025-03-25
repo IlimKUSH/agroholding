@@ -1,10 +1,12 @@
+@use './global' as header;
+
 .header {
   padding: 20px 0;
   background-color: #ffffff !important;
   &__up {
-    @include displayCenter(center, space-between);
+    @include header.displayCenter(center, space-between);
     &__up {
-      @include displayCenter(center, center);
+      @include header.displayCenter(center, center);
       p {
         font-size: 18px;
         font-weight: 500;
@@ -24,19 +26,19 @@
       }
     }
     &__down {
-      @include displayCenter(center, center);
+      @include header.displayCenter(center, center);
       .icon_wrapper {
         margin: 0 5px;
-        background-color: $brand_three;
+        background-color: header.$brand_three;
         min-width: 50px;
         min-height: 50px;
         border-radius: 50%;
-        @include displayCenter(center, center);
+        @include header.displayCenter(center, center);
         cursor: pointer;
         transition: all 0.5s ease-in-out;
         &:hover {
-          background-color: $brand_one;
-          color: $white;
+          background-color: header.$brand_one;
+          color: header.$white;
         }
       }
     }
@@ -46,14 +48,14 @@
       background-color: #ffffff !important;
       .nav__icon {
         font-size: 25px;
-        color: $black !important;
+        color: header.$black !important;
       }
       .gggg {
         a {
           margin: 0 20px;
         }
         .active {
-          background-color: $brand_two;
+          background-color: header.$brand_two;
           border-radius: 5px;
           padding-right: 15px;
           padding-left: 15px;

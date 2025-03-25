@@ -1,3 +1,5 @@
+@use './global' as farming;
+
 .farming {
   margin-top: -150px;
   padding: 240px 0 120px;
@@ -5,7 +7,7 @@
   .header__caption,
   .section__title {
     text-align: left;
-    color: $white;
+    color: farming.$white;
   }
   .right__p {
     font-size: 16px;
@@ -19,26 +21,26 @@
     padding: 35px 40px 34px;
     border: 1px solid #5c655a;
     transition: all 0.5s ease-in-out;
-    background-color: $black;
+    background-color: farming.$black;
     border-radius: 5px;
     &:hover {
-      background-color: $brand_two;
+      background-color: farming.$brand_two;
       svg,
       h4 {
-        color: $black;
+        color: farming.$black;
         transition: all 0.5s ease-in-out;
       }
     }
     svg {
       font-size: 55px;
-      color: $brand_two;
+      color: farming.$brand_two;
     }
     h4 {
       font-size: 26px;
       font-weight: 700;
       margin-top: 9px;
-      font-family: $Amatic;
-      color: $white;
+      font-family: farming.$Amatic;
+      color: farming.$white;
     }
   }
 }

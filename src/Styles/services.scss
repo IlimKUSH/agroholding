@@ -1,21 +1,23 @@
+@use './global' as services;
+
 .services {
-  background-color: $brand_three;
+  background-color: services.$brand_three;
   width: 100%;
   padding: 120px 0 90px;
   &__up {
     // padding: 50px 0;
     p {
-      color: $brand_one;
+      color: services.$brand_one;
       text-align: center;
       font-size: 14px;
       font-weight: 500;
-      font-family: $Barlow;
+      font-family: services.$Barlow;
       letter-spacing: 2px;
       text-transform: uppercase;
     }
     h1 {
-      color: $black;
-      font-family: $Amatic;
+      color: services.$black;
+      font-family: services.$Amatic;
       font-weight: 700;
       text-transform: uppercase;
       text-align: center;
@@ -28,7 +30,7 @@
     }
   }
   &__down {
-    @include displayCenter(center, space-between);
+    @include services.displayCenter(center, space-between);
     flex-wrap: wrap;
     margin-top: 50px;
     .box {
@@ -40,7 +42,7 @@
       transition: all 0.5s ease-in-out;
       margin: 0px auto 20px auto;
       &:hover {
-        box-shadow: $box_shadow_three;
+        box-shadow: services.$box_shadow_three;
       }
       .top {
         padding: 44px 50px 62px;
@@ -48,7 +50,7 @@
           font-size: 30px;
           font-weight: 700;
           padding-bottom: 36px;
-          font-family: $Amatic;
+          font-family: services.$Amatic;
           width: 50px;
         }
         p {

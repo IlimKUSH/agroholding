@@ -1,6 +1,6 @@
 import React from 'react'
 import {Container, Image, Nav, Navbar} from 'react-bootstrap'
-import {GoMailRead} from 'react-icons/go'
+import {GoMail} from 'react-icons/go'
 import {BiPhoneCall} from 'react-icons/bi'
 
 import {
@@ -23,7 +23,7 @@ const Header = () => {
         <div className='header__up'>
           <div className='header__up__up'>
             <p>
-              <GoMailRead /> <span>needhelp@tripo.com</span>
+              <GoMail /> <span>needhelp@tripo.com</span>
             </p>
             <p>
               <BiPhoneCall /> <span>666 888 0000</span>

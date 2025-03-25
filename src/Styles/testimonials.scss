@@ -1,3 +1,5 @@
+@use './global' as testimonials;
+
 .testimonials {
   background-color: #ffffff !important;
   padding: 120px 0 0px;
@@ -6,17 +8,17 @@
     .green {
       margin: 0;
       text-transform: uppercase;
-      color: $brand_one;
+      color: testimonials.$brand_one;
       font-size: 14px;
-      font-family: $Barlow;
+      font-family: testimonials.$Barlow;
       font-weight: 600;
       letter-spacing: 0.2em;
       line-height: 24px;
     }
     h1 {
       font-size: 60px;
-      color: $black;
-      font-family: $Amatic;
+      color: testimonials.$black;
+      font-family: testimonials.$Amatic;
       font-size: 70px;
       font-weight: 700;
       line-height: 1em;
@@ -26,7 +28,7 @@
       margin-bottom: 42px;
     }
     .infpoo {
-      font-family: $Barlow;
+      font-family: testimonials.$Barlow;
       color: #878986;
       font-size: 16px;
       line-height: 34px;
@@ -42,10 +44,10 @@
     &__counter {
       padding: 60px 0;
       flex-wrap: wrap;
-      @include displayCenter(center, flex-start);
+      @include testimonials.displayCenter(center, flex-start);
       border-bottom: 1px solid rgb(212, 212, 212);
       .circles {
-        background-color: $black;
+        background-color: testimonials.$black;
         min-width: 100px;
         min-height: 100px;
         border-radius: 50%;
@@ -53,14 +55,14 @@
       }
       div {
         h1 {
-          font-family: $Amatic;
+          font-family: testimonials.$Amatic;
           font-weight: 700;
           font-size: 60px;
         }
         p {
-          font-family: $Barlow;
+          font-family: testimonials.$Barlow;
           font-weight: 500;
-          color: $brand_one;
+          color: testimonials.$brand_one;
         }
       }
     }
@@ -68,7 +70,7 @@
   &__right {
     padding: 67px 80px 80px;
     border-radius: 5px;
-    background-color: $brand_one;
+    background-color: testimonials.$brand_one;
     position: relative;
     &:before {
       position: absolute;
@@ -102,9 +104,9 @@
     }
     .test_bottom {
       padding: 50px 0 !important;
-      @include displayCenter(center, flex-start);
+      @include testimonials.displayCenter(center, flex-start);
       .circles {
-        background-color: $black;
+        background-color: testimonials.$black;
         width: 100px;
         height: 100px;
         border-radius: 50%;
@@ -117,15 +119,15 @@
         }
       }
       h1 {
-        font-family: $Amatic;
+        font-family: testimonials.$Amatic;
         font-weight: 700;
         font-size: 30px;
-        color: $white;
+        color: testimonials.$white;
       }
       p {
-        font-family: $Barlow;
+        font-family: testimonials.$Barlow;
         font-weight: 500;
-        color: $white;
+        color: testimonials.$white;
       }
     }
   }

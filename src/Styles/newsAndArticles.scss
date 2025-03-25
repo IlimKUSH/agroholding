@@ -1,19 +1,21 @@
+@use './global' as news;
+
 .news {
   padding: 232px 0 120px;
   &__content {
     text-align: center;
     h1 {
-      color: $black;
+      color: news.$black;
       font-size: 70px;
       font-weight: 700;
-      font-family: $Amatic;
+      font-family: news.$Amatic;
       line-height: 1em;
     }
     p {
       text-transform: uppercase;
-      color: $brand_one;
+      color: news.$brand_one;
       font-size: 14px;
-      font-family: $Barlow;
+      font-family: news.$Barlow;
       font-weight: 600;
       letter-spacing: 0.2em;
       line-height: 24px;
@@ -32,7 +34,7 @@
         }
         .blog__Card__body {
           .blog__content {
-            box-shadow: $box_shadow_one;
+            box-shadow: news.$box_shadow_one;
           }
         }
       }
@@ -51,11 +53,11 @@
           left: 50%;
           border-radius: 0 0 5px 5px;
           transform: translate(-50%);
-          background-color: $brand_two;
-          color: $black;
+          background-color: news.$brand_two;
+          color: news.$black;
           padding: 4px 12px;
           font-size: 14px;
-          font-family: $Barlow;
+          font-family: news.$Barlow;
           font-weight: 600;
           line-height: 42px;
         }
@@ -71,44 +73,44 @@
           transition: all 0.5s ease-in-out;
           padding: 30px;
           .blog__up {
-            @include displayCenter(center, space-evenly);
+            @include news.displayCenter(center, space-evenly);
             .blog__ {
               svg {
-                color: $brand_one;
+                color: news.$brand_one;
               }
               div {
                 margin-left: 10px;
                 letter-spacing: 0.2em;
-                color: $brand_one;
+                color: news.$brand_one;
                 font-size: 12px;
-                font-family: $Barlow;
+                font-family: news.$Barlow;
                 text-transform: uppercase;
               }
               flex-wrap: wrap;
-              @include displayCenter(center, center);
+              @include news.displayCenter(center, center);
             }
           }
           h3 {
             text-transform: unset;
-            color: $black;
+            color: news.$black;
             font-size: 24px;
             font-weight: 600;
-            font-family: $Barlow;
+            font-family: news.$Barlow;
             line-height: 38px;
             margin: 20px 0;
           }
           p {
-            color: $gray;
+            color: news.$gray;
             cursor: pointer;
-            font-family: $Barlow;
+            font-family: news.$Barlow;
             text-transform: unset;
 
           }
           .button {
-            color: $black;
+            color: news.$black;
             margin-top: 20px;
             span {
-              color: $brand_two;
+              color: news.$brand_two;
               margin-right: 10px;
             }
           }

@@ -1,3 +1,5 @@
+@use './global' as projects;
+
 .projects {
   padding: 120px 0 0px;
   .leaf {
@@ -12,7 +14,7 @@
       margin-bottom: 10px;
       border-radius: 5px !important;
       &:hover {
-        box-shadow: $box_shadow_one;
+        box-shadow: projects.$box_shadow_one;
       }
       img {
         border-radius: 8px !important;
@@ -22,7 +24,7 @@
         object-fit: contain;
       }
       h2 {
-        color: $white;
+        color: projects.$white;
         position: absolute;
         bottom: 20px;
         left: 50%;
