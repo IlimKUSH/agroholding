@@ -11,7 +11,7 @@ import {
 } from 'react-icons/fa'
 
 // Assets
-import Logo from '../Assets/logo.png'
+import Logo from '../Assets/logo2.png'
 import {LinkContainer} from 'react-router-bootstrap'
 import {BsSearch} from 'react-icons/bs'
 import {BiCart} from 'react-icons/bi'
@@ -23,15 +23,19 @@ const Header = () => {
         <div className='header__up'>
           <div className='header__up__up'>
             <p>
-              <GoMail /> <span>needhelp@tripo.com</span>
+              <GoMail /> <span>agroholding_kg@gmail.com</span>
             </p>
             <p>
-              <BiPhoneCall /> <span>666 888 0000</span>
+              <BiPhoneCall /> <span>+996555005500</span>
             </p>
           </div>
           <div className='header__up__middle'>
             <LinkContainer to='/agrikol-landing-page'>
-              <Image src={Logo} />
+              <img 
+                src={Logo}     
+                className="custom-logo"
+                alt="2"
+              />
             </LinkContainer>
           </div>
 
@@ -58,25 +62,25 @@ const Header = () => {
               <Navbar.Collapse id='responsive-navbar-nav'>
                 <Nav className='m-auto gggg mx-auto'>
                   <LinkContainer to='/agrikol-landing-page'>
-                    <Nav.Link>Home</Nav.Link>
+                    <Nav.Link>Главная</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to='/agrikol-landing-page/services'>
-                    <Nav.Link>Services</Nav.Link>
+                    <Nav.Link>Сервисы</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to='/agrikol-landing-page/ourprojects'>
-                    <Nav.Link>Our Projects</Nav.Link>
+                    <Nav.Link>Наши проекты</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to='/agrikol-landing-page/shop'>
-                    <Nav.Link>Shop</Nav.Link>
+                    <Nav.Link>Магазин</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to='/agrikol-landing-page/pages'>
-                    <Nav.Link>Pages</Nav.Link>
+                    <Nav.Link>Страницы</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to='/agrikol-landing-page/news'>
-                    <Nav.Link>News</Nav.Link>
+                    <Nav.Link>Новости</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to='/agrikol-landing-page/contact'>
-                    <Nav.Link>Contact</Nav.Link>
+                    <Nav.Link>Контакты</Nav.Link>
                   </LinkContainer>
                 </Nav>
               </Navbar.Collapse>

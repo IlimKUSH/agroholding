@@ -33,41 +33,41 @@ const Banner = () => {
         <div className='slider__wrapper'>
           <Image src={OneImage} alt='' />
           <div className='content'>
-            <p>The best Agriculture products</p>
+            <p>Открытое акционерное общество</p>
             <h1>
-              Welcome to <br /> agriculture Form
+              ОАО "Кыргыз Агрохолдинг" <br />  <h2>— это государственная компания, созданная для поддержки сельхозпроизводителей <br />и обеспечения продовольственной безопасности Кыргызстана.</h2>
             </h1>
-            <button>Discover More</button>
+            <button>Узнать больше</button>
           </div>
         </div>
         <div className='slider__wrapper'>
           <Image src={TwoImage} alt='' />
           <div className='content'>
-            <p>The best Agriculture products</p>
+            <p>Открытое акционерное общество</p>
             <h1>
-              Welcome to <br /> agriculture Form
+              "Кыргыз Агрохолдинг" <br />  <h2>— это государственная компания, созданная для поддержки сельхозпроизводителей <br />и обеспечения продовольственной безопасности Кыргызстана.</h2>
             </h1>
-            <button>Discover More</button>
+            <button>Узнать больше</button>
           </div>
         </div>
         <div className='slider__wrapper'>
           <Image src={ThreeImage} alt='' />
           <div className='content'>
-            <p>The best Agriculture products</p>
+            <p>Открытое акционерное общество</p>
             <h1>
-              Welcome to <br /> agriculture Form
+              "Кыргыз Агрохолдинг" <br />  <h2>— это государственная компания, созданная для поддержки сельхозпроизводителей <br />и обеспечения продовольственной безопасности Кыргызстана.</h2>
             </h1>
-            <button>Discover More</button>
+            <button>Узнать больше</button>
           </div>
         </div>
       </Slider>
       <div className='banner__buttons'>
         <button className=' btn1' onClick={previous}>
           <BiChevronLeft />
-          PREV
+          Назад
         </button>
         <button className=' btn2' onClick={next}>
-          NEXT
+          Вперед
           <BiChevronRight />
         </button>
       </div>
