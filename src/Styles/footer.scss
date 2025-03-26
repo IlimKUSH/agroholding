@@ -62,7 +62,7 @@ footer {
         @include footer.displayCenter(flex-start, space-between);
         img {
           display: block;
-          object-fit: contain;
+          object-fit: cover;
           border-radius: 5px;
         }
         p {
@@ -94,6 +94,10 @@ footer {
           @include footer.displayCenter(flex-start, center);
           flex-direction: column;
         }
+      }
+
+      .jsc {
+        justify-self: center;
       }
     }
     &__bottom {

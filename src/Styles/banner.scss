@@ -1,7 +1,7 @@
 @use './global' as banner;
 
 .banner {
-  background-color: rgb(255, 255, 255);
+  background-color: #f5f0e9;
   width: 100%;
   position: relative;
   .slick-slider {
@@ -90,12 +90,20 @@
       }
     }
     .btn1 {
-      background-color: banner.$white;
-      outline: none !important;
+      background-color: banner.$black;
+      color: banner.$white;
+      &.active {
+        background-color: banner.$white;
+        color: banner.$black;
+      }
     }
     .btn2 {
       background-color: banner.$black;
       color: banner.$white;
+      &.active {
+        background-color: banner.$white;
+        color: banner.$black;
+      }
     }
   }
 }

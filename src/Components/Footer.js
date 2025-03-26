@@ -6,75 +6,74 @@ import {
   FaDribbble,
   FaInstagram,
 } from 'react-icons/fa'
-import {BiCheck} from 'react-icons/bi'
 import {Col, Container, Image, Row} from 'react-bootstrap'
 import imgOne from '../Assets/footer-1-img-1.jpg'
-import imgTwo from '../Assets/footer-1-img-2.jpg'
+import imgThree from '../Assets/tractor.jpg'
+import imgFour from '../Assets/pole.jpg'
 
 const Footer = () => {
   const menu = [
     {
       id: uuid(),
-      title: 'about',
-      info: 'Lorem ipsum dolor sit amet, adipiscing elit. Nulla placerat posuere dui. Pellentesque venenatis sem non lacus ac auctor.',
+      title: 'о нас',
+      info: 'ОАО «Кыргыз Агрохолдинг» - это государственная компания, созданная для поддержки сельхозпроизводителей и обеспечения продовольственной безопасности Кыргызстана.',
     },
     {
       id: uuid(),
-      title: 'explore',
+      title: 'навигация',
       options: [
         {
           id: uuid(),
-          optionName: 'about us',
+          optionName: 'о нас',
         },
         {
           id: uuid(),
-          optionName: 'services',
+          optionName: 'услуги',
         },
         {
           id: uuid(),
-          optionName: 'our Projects',
+          optionName: 'наши проекты',
         },
         {
           id: uuid(),
-          optionName: 'Meet the farmers',
+          optionName: 'последние новости',
         },
-
         {
           id: uuid(),
-          optionName: 'latest news',
-        },
-
-        {
-          id: uuid(),
-          optionName: 'contact',
+          optionName: 'контакты',
         },
       ],
     },
     {
       id: uuid(),
-      title: 'news',
+      title: 'новости',
       options: [
         {
           id: uuid(),
           image: imgOne,
-          info: 'Learn 10 Best Tips for New Formers',
-          date: '30 Oct, 2019',
+          info: '«Кыргыз Агрохолдинг» выпускает дополнительные акции на 200 млн сомов',
+          date: '12 Декабря, 2024',
         },
         {
           id: uuid(),
-          image: imgTwo,
-          info: 'Farmer Sentiment Darkens Hopes Fade',
-          date: '30 Oct, 2019',
+          image: imgThree,
+          info: 'Кабмин выделяет 200 млн сомов «Кыргыз Агрохолдинг» на поддержку ирригационного фонда',
+          date: '1 Ноября, 2024',
+        },
+        {
+          id: uuid(),
+          image: imgFour,
+          info: 'Президент поменял управляющую компанию в «Агропромышленном комплексе «Корея — Кыргызстан»',
+          date: '5 Августа, 2024',
         },
       ],
     },
     {
       id: uuid(),
-      title: 'contact',
-      info: `66 Broklyn Street, New Town
-      DC 5752, New Yrok`,
-      number: '666 888 0000',
-      email: 'needhelp@agrikol.com',
+      title: 'контакты',
+      info: `город Бишкек, ул. Киевская, 96а.`,
+      number: '+996 999 000 196',
+      email: 'agroholding@gmail.com',
       socialLinks: [
         {
           id: uuid(),
@@ -101,27 +100,23 @@ const Footer = () => {
         <div className='footer__wrapper__top'>
           <Container>
             <Row>
-              <Col xl={3} lg={3} md={6} sm={12} className='mb-5'>
+              <Col xl={3} lg={3} md={6} sm={12}>
                 <h2 className='title'>{menu[0].title}</h2>
                 <p>{menu[0].info}</p>
-                <div className='input__wrapper'>
-                  <input type='email' placeholder='Email Address' />
-                  <BiCheck />
-                </div>
               </Col>
-              <Col xl={3} lg={3} md={6} sm={12} className=' mb-5 cc'>
-                <div className='explore'>
+              <Col xl={3} lg={3} md={6} sm={12}>
+                <div className='explore jsc'>
                   <h2 className='title'>{menu[1].title}</h2>
                   {menu[1].options?.map((x) => (
                     <p key={x.id}>{x.optionName}</p>
                   ))}
                 </div>
               </Col>
-              <Col xl={3} lg={3} md={6} sm={12} className='mb-5'>
+              <Col xl={3} lg={3} md={6} sm={12}>
                 <h2 className='title'>{menu[2].title}</h2>
                 {menu[2].options?.map((x) => (
                   <div className='f__wrapper' key={x.id}>
-                    <Image src={x.image} alt='' />
+                    <Image src={x.image} alt='' width={50} height={50} />
                     <div>
                       <p>{x.info}</p>
                       <p className='yellow__brand'>{x.date}</p>
@@ -129,7 +124,7 @@ const Footer = () => {
                   </div>
                 ))}
               </Col>
-              <Col xl={3} lg={3} md={6} sm={12} className='mb-5'>
+              <Col xl={3} lg={3} md={6} sm={12}>
                 <h2 className='title'>{menu[3].title}</h2>
                 <p>{menu[3].info}</p>
                 <p className='yellow__brand'>{menu[3].email}</p>
@@ -145,10 +140,10 @@ const Footer = () => {
         </div>
         <div className='footer__wrapper__bottom'>
           <Container>
-            <h5>@ All copyright 2020, Layerdrops.com</h5>
+            <h5>© 2025 Агрохолдинг. Все права защищены</h5>
             <div>
-              <h5>Privacy Policy</h5>
-              <h5>Terms of Use</h5>
+              <h5>Политика конфиденциальности</h5>
+              <h5>Условия использования</h5>
             </div>
           </Container>
         </div>

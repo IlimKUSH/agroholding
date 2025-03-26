@@ -1,52 +1,81 @@
-@use './global' as header;
+@use "./global" as header;
 
 .header {
   padding: 0 0 20px 0;
   background-color: #ffffff !important;
-  
+
+  &__left-icon {
+    position: absolute;
+    top: 18px;
+    left: 100px;
+    height: 110px;
+    z-index: 1;
+
+    @media (max-width: 768px) {
+      top: 4px;
+      right: 0;
+      height: 90px;
+    }
+  }
+
+  &__right-icon {
+    position: absolute;
+    top: 23px;
+    right: 80px;
+    height: 105px;
+    z-index: 1;
+
+    @media (max-width: 768px) {
+      top: 4px;
+      right: 0;
+      height: 90px;
+    }
+  }
+
   &__up {
-    @include header.displayCenter(center, space-between);
-    
+    padding-top: 20px;
+    @include header.displayCenter(center, space-around);
+
     &__up {
       @include header.displayCenter(center, center);
-      
+
       p {
         font-size: 18px;
         font-weight: 500;
-        
+
         &:nth-child(2) {
           margin-left: 10px;
         }
       }
     }
-    
+
     &__middle {
       margin: auto;
-      
+
       /* Добавляем стиль custom-logo */
       .custom-logo {
         height: 100px; /* Фиксированная высота */
-        width: 100%;  /* Фиксированная ширина */
+        width: 100%; /* Фиксированная ширина */
         object-fit: contain;
         display: block;
         cursor: pointer;
-        
+
         /* Для адаптивности можно добавить: */
         @media (max-width: 768px) {
           height: 100px;
           width: auto;
         }
       }
-      
+
       /* Оставляем старый стиль как fallback */
       img {
         @extend .custom-logo;
       }
     }
-    
+
     &__down {
       @include header.displayCenter(center, center);
-      
+
       .icon_wrapper {
         margin: 0 5px;
         background-color: header.$brand_three;
@@ -56,7 +85,7 @@
         @include header.displayCenter(center, center);
         cursor: pointer;
         transition: all 0.5s ease-in-out;
-        
+
         &:hover {
           background-color: header.$brand_one;
           color: header.$white;
@@ -64,21 +93,21 @@
       }
     }
   }
-  
+
   &__down {
     .navbar {
       background-color: #ffffff !important;
-      
+
       .nav__icon {
         font-size: 25px;
         color: header.$black !important;
       }
-      
+
       .gggg {
         a {
           margin: 0 20px;
         }
-        
+
         .active {
           background-color: header.$brand_two;
           border-radius: 5px;
