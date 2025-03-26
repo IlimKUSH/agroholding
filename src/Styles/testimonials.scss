@@ -1,10 +1,25 @@
-@use './global' as testimonials;
+@use "./global" as testimonials;
 
 .testimonials {
   background-color: #ffffff !important;
   padding: 120px 0 0px;
 
+  @media (max-width: 768px) {
+    padding: 40px 0 0px;
+  }
+
+  &__title {
+    text-align: left;
+    color: rgb(51, 53, 112) !important;
+
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
   &__left {
+    padding-right: 35px;
+
     .green {
       margin: 0;
       text-transform: uppercase;
@@ -15,6 +30,7 @@
       letter-spacing: 0.2em;
       line-height: 24px;
     }
+
     h1 {
       font-size: 60px;
       color: testimonials.$black;
@@ -23,58 +39,69 @@
       font-weight: 700;
       line-height: 1em;
       margin-top: 10px;
+      margin-bottom: 25px;
     }
-    img {
-      margin-bottom: 42px;
-    }
+
     .infpoo {
       font-family: testimonials.$Barlow;
-      color: #878986;
-      font-size: 16px;
+      color: rgb(51, 53, 112);
+      font-size: 18px;
       line-height: 34px;
       font-weight: 500;
-      padding-bottom: 47px;
+      padding-bottom: 20px; 
     }
-  }
-  &__bottom {
-    background-color: #ffffff !important;
-    position: relative;
-    z-index: 2;
-    padding: 60px 0;
-    &__counter {
-      padding: 60px 0;
-      flex-wrap: wrap;
-      @include testimonials.displayCenter(center, flex-start);
-      border-bottom: 1px solid rgb(212, 212, 212);
-      .circles {
-        background-color: testimonials.$black;
-        min-width: 100px;
-        min-height: 100px;
-        border-radius: 50%;
-        margin-right: 25px;
+
+    &__export-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+
+      img {
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+        object-fit: contain;
       }
+
       div {
-        h1 {
-          font-family: testimonials.$Amatic;
-          font-weight: 700;
-          font-size: 60px;
+        h3 {
+          font-family: testimonials.$Barlow;
+          font-weight: 600;
+          color: #14396a;
+          font-size: 18px;
+          margin-bottom: 5px;
         }
+
         p {
           font-family: testimonials.$Barlow;
-          font-weight: 500;
-          color: testimonials.$brand_one;
+          color: rgb(51, 53, 112);
+          font-size: 18px;
+          line-height: 1.6;
         }
       }
     }
   }
+
   &__right {
-    padding: 67px 80px 80px;
+    width: 526px;
+    height: 623px;
     border-radius: 5px;
-    background-color: testimonials.$brand_one;
     position: relative;
+
+    background-color: #2275b8;
+    background-image: url("../Assets/testimonials.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 500px;
+    }
+
     &:before {
       position: absolute;
-      content: '';
+      content: "";
       height: 20px;
       right: 20px;
       left: 20px;
@@ -82,17 +109,18 @@
       background: #f8f4ef;
       border-radius: 3px;
     }
+
     &:after {
       position: absolute;
-      content: '';
+      content: "";
       height: 20px;
       right: 40px;
       left: 40px;
       bottom: -40px;
       background: #f8f4ef;
-
       border-radius: 3px;
     }
+
     .sds {
       color: #fff;
       border-bottom: 1px solid rgb(156, 156, 156);
@@ -102,15 +130,18 @@
       font-weight: 300;
       padding-bottom: 50px !important;
     }
+
     .test_bottom {
       padding: 50px 0 !important;
       @include testimonials.displayCenter(center, flex-start);
+
       .circles {
         background-color: testimonials.$black;
         width: 100px;
         height: 100px;
         border-radius: 50%;
         margin-right: 25px;
+
         img {
           width: 100%;
           height: 100%;
@@ -118,12 +149,14 @@
           justify-content: cover;
         }
       }
+
       h1 {
         font-family: testimonials.$Amatic;
         font-weight: 700;
         font-size: 30px;
         color: testimonials.$white;
       }
+
       p {
         font-family: testimonials.$Barlow;
         font-weight: 500;
