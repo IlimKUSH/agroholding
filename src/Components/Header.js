@@ -40,8 +40,6 @@ const Header = () => {
               <BiPhoneCall /> <span>+996 999 000 196</span>
             </p>
           </div>
-          {/* <div style={{ display: "flex", flexDirection: "row", alignItems: "start" }}>
-          </div> */}
 
           <div className="header__up__down">
             <div className="icon_wrapper">

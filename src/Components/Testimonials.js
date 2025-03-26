@@ -1,69 +1,68 @@
-import React from 'react'
-import {Col, Container, Image, Row} from 'react-bootstrap'
-import Leaf from '../Assets/leaf.png'
+import React from "react";
+import { Col, Container, Image, Row } from "react-bootstrap";
+import Leaf from "../Assets/leaf.png";
+import PotatoIcon from "../Assets/testimonials-1.png"; 
+import GreensIcon from "../Assets/testimonials-2.png";
+import ChickenIcon from "../Assets/testimonials-3.png"; 
 
 const Testimonials = () => {
   return (
-    <div className='testimonials'>
+    <div className="testimonials">
       <Container>
         <Row>
-          <Col xl={6} lg={6} md={12} sm={12}>
-            <div className='testimonials__left'>
-              <p className='green'>testimonials</p>
-              <h1>What our customers are talking about</h1>
-              <Image src={Leaf} alt='' />
-              <p className='infpoo'>
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration in some form, by
-                injected humour, or randomised words which don't look even
-                slightly believable.
+          <Col xl={8} lg={8} md={8} sm={8}>
+            <div className="testimonials__left">
+              <h1 className="testimonials__title">Экспорт</h1>
+              <p className="infpoo">
+                ОАО «Кыргыз Агрохолдинг» активно реализует ряд проектов,
+                направленных на развитие агропромышленного комплекса Кыргызстана
+                и укрепление международных связей. Ниже представлены ключевые
+                инициативы:
               </p>
-            </div>
-            <div className='testimonials__bottom__counter'>
-              <div className='circles'></div>
-              <div>
-                <h1>4,850,000</h1>
-                <p>Agriculture projects are completed</p>
+
+              <div className="testimonials__left__export-item">
+                <Image src={PotatoIcon} alt="Картофель" />
+                <div>
+                  <h3>Республика Узбекистан</h3>
+                  <p>
+                    В октябре 2024 года был заключён контракт на поставку
+                    картофеля в Республику Узбекистан.
+                  </p>
+                </div>
+              </div>
+
+              <div className="testimonials__left__export-item">
+                <Image src={GreensIcon} alt="Зелень" />
+                <div>
+                  <h3>Российская Федерация</h3>
+                  <p>
+                    В ноябре 2024 года был заключён контракт на поставку
+                    капусты, моркови, редьки и свеклы в Российскую Федерацию.
+                  </p>
+                </div>
+              </div>
+
+              <div className="testimonials__left__export-item">
+                <Image src={ChickenIcon} alt="Курица" />
+                <div>
+                  <h3>Китайская Народная Республика</h3>
+                  <p>
+                    В декабре 2024 года был заключён контракт на поставку
+                    субпродуктов птицы в Китайскую Народную Республику.
+                  </p>
+                </div>
               </div>
             </div>
           </Col>
-          <Col xl={6} lg={6} md={12} sm={12}>
-            <div className='testimonials__right'>
-              <p className='sds'>
-                This is due to their excellent service, and augue homero
-                consectetuer in nam. Eu quo laoreet propriae, malis exerci
-                habemus has vocent persius eum ea.
-              </p>
-              <div className='test_bottom'>
-                <div className='circles'>
-                  <Image
-                    src='https://avatars.githubusercontent.com/u/42517251?v=4'
-                    alt=''
-                    roundedCircle
-                  />
-                </div>
-                <div>
-                  <h1>Kirankumar Gonti</h1>
-                  <p>Frontend Developer</p>
-                </div>
-              </div>
+          <Col xl={4} lg={4} md={4} sm={4}>
+            <div className="testimonials__right">
+              {/* Содержимое правого блока */}
             </div>
           </Col>
         </Row>
       </Container>
-      {/* <div className='testimonials__bottom'>
-        <Container>
-          <div className='testimonials__bottom__counter'>
-            <div className='circles'></div>
-            <div>
-              <h1>4,850,000</h1>
-              <p>Agriculture projects are completed</p>
-            </div>
-          </div>
-        </Container>
-      </div> */}
     </div>
-  )
-}
+  );
+};
 
-export default Testimonials
+export default Testimonials;
