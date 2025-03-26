@@ -13,8 +13,6 @@ import {
 // Assets
 import Logo from '../Assets/logo2.png'
 import {LinkContainer} from 'react-router-bootstrap'
-import {BsSearch} from 'react-icons/bs'
-import {BiCart} from 'react-icons/bi'
 
 const Header = () => {
   return (
@@ -26,7 +24,7 @@ const Header = () => {
               <GoMail /> <span>agroholding_kg@gmail.com</span>
             </p>
             <p>
-              <BiPhoneCall /> <span>+996555005500</span>
+              <BiPhoneCall /> <span>+996 999 000 196</span>
             </p>
           </div>
           <div className='header__up__middle'>
@@ -54,10 +52,10 @@ const Header = () => {
             </div>
           </div>
         </div>
+        
         <div className='header__down'>
           <Navbar collapseOnSelect expand='lg' bg='light' variant='light'>
             <Container>
-              <BsSearch className='search__icon nav__icon' />
               <Navbar.Toggle aria-controls='responsive-navbar-nav' />
               <Navbar.Collapse id='responsive-navbar-nav'>
                 <Nav className='m-auto gggg mx-auto'>
@@ -84,9 +82,6 @@ const Header = () => {
                   </LinkContainer>
                 </Nav>
               </Navbar.Collapse>
-              <Nav.Link>
-                <BiCart className='cart_icon nav__icon' />
-              </Nav.Link>
             </Container>
           </Navbar>
         </div>

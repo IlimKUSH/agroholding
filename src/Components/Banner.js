@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import {useRef, useState} from 'react'
 import {Image} from 'react-bootstrap'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
@@ -11,6 +11,8 @@ import ThreeImage from '../Assets/slide_v1_3.jpg'
 import {BiChevronRight, BiChevronLeft} from 'react-icons/bi'
 
 const Banner = () => {
+  const [activeButton, setActiveButton] = useState('back');
+
   const settings = {
     dots: false,
     infinite: true,
@@ -19,13 +21,20 @@ const Banner = () => {
     slidesToScroll: 1,
     fade: true,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 4000,
     cssEase: 'linear',
   }
 
   const sliderRef = useRef()
-  const next = () => sliderRef.current.slickNext()
-  const previous = () => sliderRef.current.slickPrev()
+
+  const next = () => {
+    sliderRef.current.slickNext();
+    setActiveButton('forward');
+  }
+  const previous = () => {
+    sliderRef.current.slickPrev();
+    setActiveButton('back');
+  }
 
   return (
     <div className='banner'>
@@ -33,9 +42,9 @@ const Banner = () => {
         <div className='slider__wrapper'>
           <Image src={OneImage} alt='' />
           <div className='content'>
-            <p>Открытое акционерное общество</p>
+          <p>Открытое акционерное общество</p>
             <h1>
-              ОАО "Кыргыз Агрохолдинг" <br />  <h2>— это государственная компания, созданная для поддержки сельхозпроизводителей <br />и обеспечения продовольственной безопасности Кыргызстана.</h2>
+              "Кыргыз Агрохолдинг" <br />  <h2>— это государственная компания, созданная для поддержки сельхозпроизводителей <br />и обеспечения продовольственной безопасности Кыргызстана.</h2>
             </h1>
             <button>Узнать больше</button>
           </div>
@@ -43,7 +52,7 @@ const Banner = () => {
         <div className='slider__wrapper'>
           <Image src={TwoImage} alt='' />
           <div className='content'>
-            <p>Открытое акционерное общество</p>
+          <p>Открытое акционерное общество</p>
             <h1>
               "Кыргыз Агрохолдинг" <br />  <h2>— это государственная компания, созданная для поддержки сельхозпроизводителей <br />и обеспечения продовольственной безопасности Кыргызстана.</h2>
             </h1>
@@ -55,18 +64,24 @@ const Banner = () => {
           <div className='content'>
             <p>Открытое акционерное общество</p>
             <h1>
-              "Кыргыз Агрохолдинг" <br />  <h2>— это государственная компания, созданная для поддержки сельхозпроизводителей <br />и обеспечения продовольственной безопасности Кыргызстана.</h2>
+              "Кыргыз Агрохолдинг" <br />  <h2>Приглашает инвесторов к сотрудничеству для реализации масштабных проектов,<br /> которые будут способствовать развитию агропромышленного сектора и укреплению продовольственной безопасности страны.</h2>
             </h1>
             <button>Узнать больше</button>
           </div>
         </div>
       </Slider>
       <div className='banner__buttons'>
-        <button className=' btn1' onClick={previous}>
+      <button 
+          className={`btn1 ${activeButton === 'back' ? 'active' : ''}`} 
+          onClick={previous}
+        >
           <BiChevronLeft />
           Назад
         </button>
-        <button className=' btn2' onClick={next}>
+        <button 
+          className={`btn2 ${activeButton === 'forward' ? 'active' : ''}`} 
+          onClick={next}
+        >
           Вперед
           <BiChevronRight />
         </button>
