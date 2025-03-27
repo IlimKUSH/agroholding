@@ -7,25 +7,24 @@ import Two from '../Assets/brand-1-2.png'
 import Three from '../Assets/brand-1-3.png'
 import Four from '../Assets/brand-1-4.png'
 import Five from '../Assets/brand-1-5.png'
+import Logo1 from '../Assets/logo-1.png'
+import Logo2 from '../Assets/logo-2.png'
+import Logo3 from '../Assets/logo-3.png'
 
 const Sponsors = () => {
   const images = [
     {
       id: uuid(),
-      image: One,
+      image: Logo1,
     },
     {
       id: uuid(),
 
-      image: Two,
+      image: Logo3,
     },
     {
       id: uuid(),
-      image: Three,
-    },
-    {
-      id: uuid(),
-      image: Four,
+      image: Logo2,
     },
   ]
   return (
@@ -33,10 +32,10 @@ const Sponsors = () => {
       <Container>
         <Row>
           <div className='sponsors__top'>
-            <Row>
+            <Row className='sponsors__top__imagesRow'>
               {images?.map((img) => (
                 <Col key={img.id} xl={3} lg={3} md={6} sm={12} className='mb-5'>
-                  <Image src={img.image} alt='' />
+                  <Image src={img.image} alt='' height={117} />
                 </Col>
               ))}
             </Row>
