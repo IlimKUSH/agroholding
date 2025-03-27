@@ -1,53 +1,57 @@
-import React from 'react'
-import {Col, Container, Image, ProgressBar, Row} from 'react-bootstrap'
+import React from "react";
+import { Col, Container, Image, Row } from "react-bootstrap";
 
-import Img from '../Assets/product-1-img-1.jpg'
-import Leaf from '../Assets/leaf.png'
+import Img from "../Assets/product-1-img-1.jpg";
+import One from "../Assets/growing-products-img-1.png";
+import Two from "../Assets/growing-products-img-2.png";
+import Three from "../Assets/growing-products-img-3.png";
 
 const GrowingProducts = () => {
   return (
-    <div className='growing'>
+    <div className="growing">
       <Container>
         <Row>
           <Col xl={6} lg={6} md={12} sm={12}>
-            <div className='image_container'>
-              <Image src={Img} alt='' />
-              <div className='fit'>
-                <h2>40 Year</h2>
-                <p>Of Experience</p>
+            <div className="image_container">
+              <Image src={Three} alt="" />
+              <div className="fit">
+                <p>Государственный</p>
+                <p>контракт</p>
               </div>
             </div>
           </Col>
-          <Col xl={6} lg={6} md={12} sm={12} className='mb-5'>
-            <div className='products'>
-              <p>fresh products</p>
-              <h3>Growing products</h3>
-              <Image src={Leaf} alt='' />
-              <p className='para'>
-                Lorem ipsum dolor sit amet nsectetur cing elit. Suspe ndisse
-                suscipit sagittis leo sit met entum estibu dignissim posuere
-                cubilia durae. Leo sit met entum cubilia crae onec.
-              </p>
-              <div className='progress__bars'>
-                <div>
-                  <h5>Agriculture</h5>
-                  <h5>60%</h5>
-                </div>
-                <ProgressBar now={60} />
+          <Col xl={6} lg={6} md={12} sm={12} className="mb-5">
+            <div className="products">
+              <p>контракт на поставку ИРП для пограничников</p>
+              <h3>
+                Обеспечение пограничников Кыргызстана индивидуальными рационами
+                питания
+              </h3>
+
+              <div className="para__wrapper">
+                <Image src={Two} height={50} />
+                <p className="para">
+                  В декабре 2024 года заключён контракт с Пограничной службой
+                  Государственного комитета национальной безопасности Кыргызской
+                  Республики на поставку индивидуального рациона питания (ИРП)
+                  для пограничников согласно распоряжению Кабинета Министров от
+                  27 декабря 2024 года № 858-т.
+                </p>
               </div>
-              <div className='progress__bars'>
-                <div>
-                  <h5>Organic</h5>
-                  <h5>98%</h5>
-                </div>
-                <ProgressBar now={98} />
+
+              <div className="para__wrapper">
+                <Image src={One} height={50} />
+                <p className="para">
+                  Планы на 2025 год Расширение поставок индивидуального рациона
+                  питания для всех силовых структур Кыргызстана
+                </p>
               </div>
             </div>
           </Col>
         </Row>
       </Container>
     </div>
-  )
-}
+  );
+};
 
-export default GrowingProducts
+export default GrowingProducts;
