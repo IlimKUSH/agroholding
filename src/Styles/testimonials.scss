@@ -8,8 +8,8 @@
 }
 
 .testimonials {
-  background-color: #ffffff !important;
-  padding: 120px 0 0px;
+  background-color: #f1f8f1 !important;
+  padding: 120px 0 60px;
   overflow: hidden;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
   color: #555555;
@@ -32,6 +32,14 @@
 
   &__left {
     padding-right: 35px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+    flex-direction: column;
+    }
 
     .green {
       margin: 0;
@@ -52,6 +60,7 @@
     }
 
     .infpoo {
+      color: #333333;
       font-size: 1.2rem;
       padding-bottom: 20px;
     }
@@ -61,6 +70,13 @@
       align-items: flex-start;
       margin-bottom: 20px;
 
+      border: 1px solid #2da98b;
+      padding: 17px 17px 0 17px;
+      background: rgb(51 255 137 / 5%);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      flex: 1; 
+    
       img {
         width: 50px;
         height: 50px;
@@ -77,6 +93,7 @@
         }
 
         p {
+          color: #666666;
           font-size: 16px;
           line-height: 1.6;
         }
