@@ -1,9 +1,9 @@
 import React from "react";
 import { Col, Container, Image, Row } from "react-bootstrap";
 import Leaf from "../Assets/leaf.png";
-import PotatoIcon from "../Assets/testimonials-1.png"; 
+import PotatoIcon from "../Assets/testimonials-1.png";
 import GreensIcon from "../Assets/testimonials-2.png";
-import ChickenIcon from "../Assets/testimonials-3.png"; 
+import ChickenIcon from "../Assets/testimonials-3.png";
 
 const Testimonials = () => {
   return (
@@ -12,7 +12,24 @@ const Testimonials = () => {
         <Row>
           <Col xl={8} lg={8} md={8} sm={8}>
             <div className="testimonials__left">
-              <h1 className="testimonials__title">Экспорт</h1>
+              <div className="section-title-container">
+                <Image
+                  src={Leaf}
+                  alt="Leaf Icon"
+                  className="leaf-icon left"
+                  width={40}
+                  height={40}
+                />
+                <h1 className="testimonials__title section-title">Экспорт</h1>
+                <Image
+                  src={Leaf}
+                  alt="Leaf Icon"
+                  className="leaf-icon right"
+                  width={40}
+                  height={40}
+                />
+              </div>
+
               <p className="infpoo">
                 ОАО «Кыргыз Агрохолдинг» активно реализует ряд проектов,
                 направленных на развитие агропромышленного комплекса Кыргызстана
