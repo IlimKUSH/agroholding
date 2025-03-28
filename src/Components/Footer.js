@@ -95,7 +95,7 @@ const Footer = () => {
     },
   ]
   return (
-    <footer>
+    <footer id="footer">
       <div className='footer__wrapper'>
         <div className='footer__wrapper__top'>
           <Container>

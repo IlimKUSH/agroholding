@@ -43,7 +43,7 @@ const AgricultureTypes = () => {
   }
 
   return (
-    <div className="activities-section">
+    <div className="activities-section" id="activity">
       <Container>
         <div className="section-header">
           <h2 className="section-title" data-aos="fade-down">

@@ -45,7 +45,7 @@ const Services = () => {
   };
 
   return (
-    <div className="services">
+    <div className="services" id="our-goals">
       <Container>
         <div className="services__up">
           <div className="title-with-leaf">

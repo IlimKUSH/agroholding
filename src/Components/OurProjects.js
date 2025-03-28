@@ -98,7 +98,7 @@ const OurProjects = () => {
   }, []);
 
   return (
-    <div className="plans-2025">
+    <div className="plans-2025" id="plans">
       <Container>
         <div className="plans-header" data-aos="fade-down">
           <div className="title-with-leaf">

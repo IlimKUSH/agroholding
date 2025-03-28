@@ -33,7 +33,7 @@ const NewsAndArticles = () => {
     },
   ];
   return (
-    <div className="news">
+    <div className="news" id="news">
       <Container>
         <div className="news__content">
           <p>из блога</p>
