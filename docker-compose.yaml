@@ -1,0 +1,13 @@
+services:
+  pytest3:
+    container_name: pytest3.brisklyminds.com
+    build: .
+    volumes:
+      - './:/app'
+      - '/app/node_modules'
+    ports:
+      - 7334:3000  # Change the exposed port to 8087
+    stdin_open: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    command: npm start
