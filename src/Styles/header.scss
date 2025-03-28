@@ -1,5 +1,9 @@
 @use "./global" as header;
 
+.clicable {
+  cursor: pointer;
+}
+
 .header {
   padding: 0 0 20px 0;
   background-color: #ffffff !important;
