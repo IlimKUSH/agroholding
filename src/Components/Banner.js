@@ -37,7 +37,7 @@ const Banner = () => {
   }
 
   return (
-    <div className='banner'>
+    <div className='banner' id="banner">
       <Slider ref={sliderRef} {...settings}>
         <div className='slider__wrapper'>
           <Image src={OneImage} alt='' />

@@ -1,22 +1,49 @@
-import React from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { GoMail } from "react-icons/go";
 import { BiPhoneCall } from "react-icons/bi";
-
 import {
   FaFacebookSquare,
   FaTwitter,
   FaDribbble,
   FaInstagram,
 } from "react-icons/fa";
+import { Link } from "react-scroll";
 
-// Assets
 import Logo from "../Assets/logo2.png";
 import Logo1 from "../Assets/logo-1.png";
 
-import { LinkContainer } from "react-router-bootstrap";
+const sections = [
+  { id: "banner", label: "Главная" },
+  { id: "our-goals", label: "Наши цели" },
+  { id: "activity", label: "Деятельность" },
+  { id: "export", label: "Экспорт" },
+  { id: "plans", label: "Планы" },
+  { id: "news", label: "Новости" },
+  { id: "footer", label: "Контакты" },
+];
 
 const Header = () => {
+  const [activeLink, setActiveLink] = useState("banner");
+
+  const handleScroll = useCallback(() => {
+    for (const section of sections) {
+      const element = document.getElementById(section.id);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+          setActiveLink(section.id);
+          break;
+        }
+      }
+    }
+  }, [sections]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
+
   return (
     <div className="header">
       <img src={Logo} className="header__left-icon" alt="2" />
@@ -55,27 +82,18 @@ const Header = () => {
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="m-auto gggg mx-auto">
-                  <LinkContainer to="/" className="clicable">
-                    <Nav.Link>Главная</Nav.Link>
-                  </LinkContainer>
-                  <LinkContainer to="/#our-goals" className="clicable">
-                    <Nav.Link>Наши цели</Nav.Link>
-                  </LinkContainer>
-                  <LinkContainer to="/#activity" className="clicable">
-                    <Nav.Link>Деятельность</Nav.Link>
-                  </LinkContainer>
-                  <LinkContainer to="/#export" className="clicable">
-                    <Nav.Link>Экспорт</Nav.Link>
-                  </LinkContainer>
-                  <LinkContainer to="/#plans" className="clicable">
-                    <Nav.Link>Планы</Nav.Link>
-                  </LinkContainer>
-                  <LinkContainer to="/#news" className="clicable">
-                    <Nav.Link>Новости</Nav.Link>
-                  </LinkContainer>
-                  <LinkContainer to="/#footer" className="clicable">
-                    <Nav.Link>Контакты</Nav.Link>
-                  </LinkContainer>
+                  {sections.map((section) => (
+                    <Nav.Link
+                      key={section.id}
+                      as={Link}
+                      to={section.id}
+                      smooth={true}
+                      duration={500}
+                      className={`clicable ${activeLink === section.id ? "active" : ""}`}
+                    >
+                      {section.label}
+                    </Nav.Link>
+                  ))}
                 </Nav>
               </Navbar.Collapse>
             </Container>
