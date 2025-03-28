@@ -1,7 +1,18 @@
 import React, {useEffect} from 'react';
-import { Container } from 'react-bootstrap';
+import {Container, Image} from 'react-bootstrap';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // Стили
+import 'aos/dist/aos.css';
+import {
+  TbBuilding, TbBuildingWarehouse,
+  TbCheck,
+  TbClipboardList,
+  TbPlant,
+  TbPlant2,
+  TbTractor, TbTrendingUp,
+  TbTruckDelivery,
+  TbWorld
+} from "react-icons/tb";
+import Leaf from "../Assets/leaf.png";
 
 const AgricultureTypes = () => {
 
@@ -21,8 +32,14 @@ const AgricultureTypes = () => {
   ];
 
   function getActivityIcon(index) {
-    const icons = ["🌱", "🌍", "🏢", "🚜", "📋"];
-    return icons[index] || "✅";
+    const icons = [
+      <TbPlant size={28} />,
+      <TbTruckDelivery size={28} />,
+      <TbBuildingWarehouse size={28} />,
+      <TbTrendingUp size={28} />,
+      <TbClipboardList size={28} />
+    ];
+    return icons[index] || <TbCheck size={24} />;
   }
 
   return (
@@ -30,15 +47,17 @@ const AgricultureTypes = () => {
       <Container>
         <div className="section-header">
           <h2 className="section-title" data-aos="fade-down">
-            <span className="title-decorator">//</span> Основные виды деятельности
+            <div className="title-with-leaf">
+              <Image src={Leaf} alt="Leaf Icon" className="leaf-icon left"/>
+              <h2 className="section-title">Виды деятельности</h2>
+              <Image src={Leaf} alt="Leaf Icon" className="leaf-icon right"/>
+            </div>
           </h2>
           <p className="section-subtitle" data-aos="fade-down" data-aos-delay="100">
             ОАО «Кыргыз агрохолдинг» осуществляет многопрофильную деятельность,
             <br/>направленную на развитие агропромышленного комплекса Кыргызстана
           </p>
-          <div className="section-divider" data-aos="fade-down" data-aos-delay="200">
-            <div className="divider-line"></div>
-            <div className="divider-icon">🌾</div>
+          <div className="section-divider">
             <div className="divider-line"></div>
           </div>
         </div>

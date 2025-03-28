@@ -50,7 +50,7 @@ const Services = () => {
         <div className="services__up">
           <div className="title-with-leaf">
             <Image src={Leaf} alt="Leaf Icon" className="leaf-icon left"/>
-            <h1 className="section-title">Наши Цели</h1>
+            <h2 className="section-title">Наши Цели</h2>
             <Image src={Leaf} alt="Leaf Icon" className="leaf-icon right"/>
           </div>
           <p>

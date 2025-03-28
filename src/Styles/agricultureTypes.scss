@@ -2,8 +2,8 @@
 
 /* Base Styles */
 .activities-section {
-  padding: 100px 0;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9f5ee 100%);
+  padding: 50px 0;
+  //background: linear-gradient(135deg, #f8f9fa 0%, #e9f5ee 100%);
   position: relative;
   overflow: hidden;
 }
@@ -14,11 +14,27 @@
   position: relative;
 }
 
+.title-with-leaf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.leaf-icon {
+  width: 50px;
+  height: auto;
+  filter: brightness(0) saturate(100%) invert(18%) sepia(72%) saturate(405%) hue-rotate(145deg) brightness(94%) contrast(91%); /* Icon effect */
+}
+
+.leaf-icon.left {
+  transform: scaleX(-1);
+}
+
 .section-title {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   font-weight: 700;
   color: #2c3e50;
-  margin-bottom: 15px;
   position: relative;
   display: inline-block;
 }
@@ -45,7 +61,7 @@
 }
 
 .divider-line {
-  width: 80px;
+  width: 100%;
   height: 2px;
   background: linear-gradient(to right, transparent, #27ae60, transparent);
   margin: 0 15px;
@@ -260,16 +276,16 @@
 }
 
 /* Background Decorations */
-.activities-section::before {
-  content: "";
-  position: absolute;
-  top: -200px;
-  right: -200px;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(39, 174, 96, 0.05) 0%, transparent 70%);
-  z-index: 0;
-}
+//.activities-section::before {
+//  content: "";
+//  position: absolute;
+//  top: -200px;
+//  right: -200px;
+//  width: 600px;
+//  height: 600px;
+//  background: radial-gradient(circle, rgba(39, 174, 96, 0.05) 0%, transparent 70%);
+//  z-index: 0;
+//}
 
 .activities-section::after {
   content: "";
