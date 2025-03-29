@@ -325,3 +325,31 @@
   }
 }
 
+.activities-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0 20px;
+  justify-content: center;
+}
+
+.activity-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: 1px solid rgba(0,0,0,0.03);
+  width: 350px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .activity-card {
+    width: 100%;
+  }
+}
+

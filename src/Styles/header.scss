@@ -7,6 +7,7 @@
 .header {
   padding: 0 0 20px 0;
   background-color: #ffffff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); // subtle shadow for depth
 
   &__left-icon {
     position: absolute;
@@ -14,6 +15,11 @@
     left: 100px;
     height: 110px;
     z-index: 1;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
 
     @media (max-width: 768px) {
       top: 4px;
@@ -28,6 +34,11 @@
     right: 80px;
     height: 105px;
     z-index: 1;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
 
     @media (max-width: 768px) {
       top: 4px;
@@ -46,9 +57,23 @@
       p {
         font-size: 18px;
         font-weight: 500;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: header.$brand_one;
+        }
 
         &:nth-child(2) {
-          margin-left: 10px;
+          margin-left: 20px;
+        }
+
+        svg {
+          margin-right: 8px;
+          transition: transform 0.2s ease;
+        }
+
+        &:hover svg {
+          transform: scale(1.1);
         }
       }
     }
@@ -56,22 +81,24 @@
     &__middle {
       margin: auto;
 
-      /* Добавляем стиль custom-logo */
       .custom-logo {
-        height: 100px; /* Фиксированная высота */
-        width: 100%; /* Фиксированная ширина */
+        height: 100px;
+        width: 100%;
         object-fit: contain;
         display: block;
         cursor: pointer;
+        transition: transform 0.3s ease;
 
-        /* Для адаптивности можно добавить: */
+        &:hover {
+          transform: scale(1.03);
+        }
+
         @media (max-width: 768px) {
           height: 100px;
           width: auto;
         }
       }
 
-      /* Оставляем старый стиль как fallback */
       img {
         @extend .custom-logo;
       }
@@ -82,17 +109,28 @@
 
       .icon_wrapper {
         margin: 0 5px;
-        background-color: header.$brand_three;
+        background-color: #edd29d;
         min-width: 50px;
         min-height: 50px;
         border-radius: 50%;
         @include header.displayCenter(center, center);
         cursor: pointer;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.3s ease;
+        color: #fff;
 
         &:hover {
           background-color: header.$brand_one;
           color: header.$white;
+          transform: translateY(-3px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        svg {
+          transition: transform 0.3s ease;
+        }
+
+        &:hover svg {
+          transform: scale(1.1);
         }
       }
     }
@@ -101,6 +139,7 @@
   &__down {
     .navbar {
       background-color: #ffffff !important;
+      padding: 10px 0;
 
       .nav__icon {
         font-size: 25px;
@@ -109,14 +148,56 @@
 
       .gggg {
         a {
-          margin: 0 20px;
+          margin: 0 15px;
+          padding: 8px 15px;
+          color: #333;
+          font-weight: 500;
+          text-decoration: none;
+          position: relative;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: header.$brand_one;
+
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: -5px;
+              left: 0;
+              width: 100%;
+              height: 2px;
+              background-color: header.$brand_one;
+              transform: scaleX(1);
+            }
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: header.$brand_one;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+          }
         }
 
         .active {
           background-color: header.$brand_two;
+          color: #fff !important;
           border-radius: 5px;
-          padding-right: 15px;
-          padding-left: 15px;
+          padding: 8px 15px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: darken(header.$brand_two, 10%);
+
+            &::after {
+              display: none;
+            }
+          }
         }
       }
     }

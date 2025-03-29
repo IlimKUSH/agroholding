@@ -20,7 +20,7 @@ const GrowingProducts = () => {
               </div>
             </div>
           </Col>
-          <Col xl={6} lg={6} md={12} sm={12} className="mb-5">
+          <Col xl={6} lg={6} md={12} sm={12}>
             <div className="products">
               <p>контракт на поставку ИРП для пограничников</p>
               <h3>

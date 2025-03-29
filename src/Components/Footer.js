@@ -20,58 +20,34 @@ const Footer = () => {
     },
     {
       id: uuid(),
-      title: 'навигация',
+      title: 'Навигация',
       options: [
         {
           id: uuid(),
-          optionName: 'о нас',
+          optionName: 'О нас',
         },
         {
           id: uuid(),
-          optionName: 'услуги',
+          optionName: 'Услуги',
         },
         {
           id: uuid(),
-          optionName: 'наши проекты',
+          optionName: 'Наши проекты',
         },
         {
           id: uuid(),
-          optionName: 'последние новости',
+          optionName: 'Последние новости',
         },
         {
           id: uuid(),
-          optionName: 'контакты',
-        },
-      ],
-    },
-    {
-      id: uuid(),
-      title: 'новости',
-      options: [
-        {
-          id: uuid(),
-          image: imgOne,
-          info: '«Кыргыз Агрохолдинг» выпускает дополнительные акции на 200 млн сомов',
-          date: '12 Декабря, 2024',
-        },
-        {
-          id: uuid(),
-          image: imgThree,
-          info: 'Кабмин выделяет 200 млн сомов «Кыргыз Агрохолдинг» на поддержку ирригационного фонда',
-          date: '1 Ноября, 2024',
-        },
-        {
-          id: uuid(),
-          image: imgFour,
-          info: 'Президент поменял управляющую компанию в «Агропромышленном комплексе «Корея — Кыргызстан»',
-          date: '5 Августа, 2024',
+          optionName: 'Контакты',
         },
       ],
     },
     {
       id: uuid(),
       title: 'контакты',
-      info: `город Бишкек, ул. Киевская, 96а.`,
+      info: `Город Бишкек, ул. Киевская, 96а.`,
       number: '+996 999 000 196',
       email: 'agroholding@gmail.com',
       socialLinks: [
@@ -100,11 +76,11 @@ const Footer = () => {
         <div className='footer__wrapper__top'>
           <Container>
             <Row>
-              <Col xl={3} lg={3} md={6} sm={12}>
+              <Col xl={4} lg={4} md={6} sm={12}>
                 <h2 className='title'>{menu[0].title}</h2>
                 <p>{menu[0].info}</p>
               </Col>
-              <Col xl={3} lg={3} md={6} sm={12}>
+              <Col xl={4} lg={4} md={6} sm={12}>
                 <div className='explore jsc'>
                   <h2 className='title'>{menu[1].title}</h2>
                   {menu[1].options?.map((x) => (
@@ -112,25 +88,13 @@ const Footer = () => {
                   ))}
                 </div>
               </Col>
-              <Col xl={3} lg={3} md={6} sm={12}>
+              <Col xl={4} lg={4} md={6} sm={12}>
                 <h2 className='title'>{menu[2].title}</h2>
-                {menu[2].options?.map((x) => (
-                  <div className='f__wrapper' key={x.id}>
-                    <Image src={x.image} alt='' width={50} height={50} />
-                    <div>
-                      <p>{x.info}</p>
-                      <p className='yellow__brand'>{x.date}</p>
-                    </div>
-                  </div>
-                ))}
-              </Col>
-              <Col xl={3} lg={3} md={6} sm={12}>
-                <h2 className='title'>{menu[3].title}</h2>
-                <p>{menu[3].info}</p>
-                <p className='yellow__brand'>{menu[3].email}</p>
-                <p className='yellow__brand'>{menu[3].number}</p>
+                <p>{menu[2].info}</p>
+                <p className='yellow__brand'>{menu[2].email}</p>
+                <p className='yellow__brand'>{menu[2].number}</p>
                 <div className='icons__footer'>
-                  {menu[3].socialLinks?.map((y) => (
+                  {menu[2].socialLinks?.map((y) => (
                     <div className='icon_wra'>{y.icon}</div>
                   ))}
                 </div>

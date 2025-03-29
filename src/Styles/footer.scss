@@ -33,7 +33,6 @@ footer {
         line-height: 30px;
         font-weight: 500;
         font-family: footer.$Barlow;
-        text-transform: capitalize;
       }
       .input__wrapper {
         @include footer.displayCenter(center, space-between);

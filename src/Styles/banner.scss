@@ -38,13 +38,17 @@
           }
           h1 {
             margin: 35px 0 33px;
-            font-size: 100px;
-            line-height: 110px;
+            font-size: 80px;
+            line-height: 90px;
             color: banner.$white;
             font-family: banner.$Amatic;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0;
+
+            h2 {
+              font-size: 1.6rem;
+            }
           }
           button {
             display: inline-block;

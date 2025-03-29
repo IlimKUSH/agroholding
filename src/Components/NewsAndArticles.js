@@ -51,12 +51,6 @@ const NewsAndArticles = () => {
                     <div className="blog__content">
                       <h3>{box.title}</h3>
                       <p>{box.info}</p>
-                      <p className="button">
-                        <span>
-                          <FaChevronCircleRight />
-                        </span>
-                        Подробнее
-                      </p>
                     </div>
                   </div>
                 </div>

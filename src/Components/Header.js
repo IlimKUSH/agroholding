@@ -89,7 +89,7 @@ const Header = () => {
                       to={section.id}
                       smooth={true}
                       duration={500}
-                      className={`clicable ${activeLink === section.id ? "active" : ""}`}
+                      className={`clicable`}
                     >
                       {section.label}
                     </Nav.Link>

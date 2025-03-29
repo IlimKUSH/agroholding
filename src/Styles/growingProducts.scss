@@ -1,7 +1,7 @@
 @use './global' as growing;
 
 .growing {
-  padding: 120px 0 0 0px;
+  padding: 80px 0 0 0px;
   background-color: growing.$brand_three;
   .image_container {
     position: relative;
@@ -44,9 +44,7 @@
   .products {
     background-color: #ffffff;
     position: relative;
-    padding: 120px 120px 0px;
-    margin-top: 150px;
-    margin-left: -149px;
+    padding: 60px 40px 0px;
     border-radius: 5px 5px 0 0;
     box-shadow: growing.$box_shadow_one;
     height: 100%;
