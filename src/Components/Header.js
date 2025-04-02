@@ -81,7 +81,7 @@ const Header = () => {
             <Container>
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="m-auto gggg mt-5">
+                <Nav className="m-auto gggg">
                   {sections.map((section) => (
                     <Nav.Link
                       key={section.id}
