@@ -47,29 +47,23 @@ const Footer = () => {
     {
       id: uuid(),
       title: 'контакты',
-      info: `Город Бишкек, ул. Киевская, 96а.`,
-      number: '+996 999 000 196',
-      email: 'agroholding@gmail.com',
+      info: `г. Бишкек. Первомайский район, улица Киевская, 96 А, 5 этаж 501 кабинет`,
+      number: '+(996) 507 19 03 00',
+      email: 'kyrgyzagroholding@gmail.com',
       socialLinks: [
         {
           id: uuid(),
           icon: <FaFacebookSquare />,
         },
-        {
-          id: uuid(),
-          icon: <FaTwitter />,
-        },
-        {
-          id: uuid(),
-          icon: <FaInstagram />,
-        },
-        {
-          id: uuid(),
-          icon: <FaDribbble />,
-        },
       ],
     },
   ]
+
+  const handleGoToFacebook = () => {
+    window.open("https://www.facebook.com/profile.php?id=61576205045177", "_blank")
+  }
+
+
   return (
     <footer id="footer">
       <div className='footer__wrapper'>
@@ -95,7 +89,7 @@ const Footer = () => {
                 <p className='yellow__brand'>{menu[2].number}</p>
                 <div className='icons__footer'>
                   {menu[2].socialLinks?.map((y) => (
-                    <div className='icon_wra'>{y.icon}</div>
+                    <div className='icon_wra' onClick={handleGoToFacebook}>{y.icon}</div>
                   ))}
                 </div>
               </Col>

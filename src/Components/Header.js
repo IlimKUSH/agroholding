@@ -44,6 +44,10 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
 
+  const handleGoToFacebook = () => {
+    window.open("https://www.facebook.com/profile.php?id=61576205045177", "_blank")
+  }
+
   return (
     <div className="header">
       <img src={Logo} className="header__left-icon" alt="2" />
@@ -53,25 +57,16 @@ const Header = () => {
         <div className="header__up">
           <div className="header__up__up">
             <p>
-              <GoMail /> <span>agroholding_kg@gmail.com</span>
+              <GoMail /> <span>kyrgyzagroholding@gmail.com</span>
             </p>
             <p>
-              <BiPhoneCall /> <span>+996 999 000 196</span>
+              <BiPhoneCall /> <span>+(996) 507 19 03 00</span>
             </p>
           </div>
 
           <div className="header__up__down">
-            <div className="icon_wrapper">
+            <div className="icon_wrapper" onClick={handleGoToFacebook}>
               <FaFacebookSquare />
-            </div>
-            <div className="icon_wrapper">
-              <FaTwitter />
-            </div>
-            <div className="icon_wrapper">
-              <FaInstagram />
-            </div>
-            <div className="icon_wrapper">
-              <FaDribbble />
             </div>
           </div>
         </div>

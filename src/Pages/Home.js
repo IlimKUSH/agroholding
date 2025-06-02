@@ -15,7 +15,7 @@ const Home = () => {
       {/*<Sponsors />*/}
       <AgricultureTypes />
       <Testimonials />
-      <OurProjects />
+      {/*<OurProjects />*/}
       <GrowingProducts />
       <NewsAndArticles />
     </div>
