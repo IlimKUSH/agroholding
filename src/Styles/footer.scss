@@ -1,6 +1,9 @@
 @use './global' as footer;
 
 footer {
+  .footer-link:hover {
+    text-decoration: none;
+  }
   .footer__wrapper {
     width: 100%;
 

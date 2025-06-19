@@ -10,6 +10,7 @@ import {Col, Container, Image, Row} from 'react-bootstrap'
 import imgOne from '../Assets/footer-1-img-1.jpg'
 import imgThree from '../Assets/tractor.jpg'
 import imgFour from '../Assets/pole.jpg'
+import {Link} from "react-scroll";
 
 const Footer = () => {
   const menu = [
@@ -24,23 +25,38 @@ const Footer = () => {
       options: [
         {
           id: uuid(),
-          optionName: 'О нас',
+          optionName: 'Главная',
+          linkTo: 'banner',
         },
         {
           id: uuid(),
-          optionName: 'Услуги',
+          optionName: 'Наши цели',
+          linkTo: 'our-goals',
         },
         {
           id: uuid(),
-          optionName: 'Наши проекты',
+          optionName: 'Деятельность',
+          linkTo: 'activity',
         },
         {
           id: uuid(),
-          optionName: 'Последние новости',
+          optionName: 'Экспорт',
+          linkTo: 'export',
+        },
+        {
+          id: uuid(),
+          optionName: 'Планы',
+          linkTo: 'plans',
+        },
+        {
+          id: uuid(),
+          optionName: 'Новости',
+          linkTo: 'news',
         },
         {
           id: uuid(),
           optionName: 'Контакты',
+          linkTo: 'footer',
         },
       ],
     },
@@ -78,7 +94,16 @@ const Footer = () => {
                 <div className='explore jsc'>
                   <h2 className='title'>{menu[1].title}</h2>
                   {menu[1].options?.map((x) => (
-                    <p key={x.id}>{x.optionName}</p>
+                    <Link
+                      key={x.id}
+                      to={x.linkTo}
+                      smooth={true}
+                      duration={500}
+                      className="footer-link"
+                      style={{ cursor: 'pointer', display: 'block', marginBottom: '8px', color: '#fff' }} // можно стилизовать через CSS
+                    >
+                      {x.optionName}
+                    </Link>
                   ))}
                 </div>
               </Col>
@@ -99,10 +124,6 @@ const Footer = () => {
         <div className='footer__wrapper__bottom'>
           <Container>
             <h5>© 2025 Агрохолдинг. Все права защищены</h5>
-            <div>
-              <h5>Политика конфиденциальности</h5>
-              <h5>Условия использования</h5>
-            </div>
           </Container>
         </div>
       </div>
